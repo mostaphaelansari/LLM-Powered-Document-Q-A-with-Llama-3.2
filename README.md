@@ -1,5 +1,7 @@
 # LLM-Powered-Document-Q-A-with-Llama-3.2
+
 A Retrieval-Augmented Generation (RAG) application that enables intelligent document analysis and question answering using Llama 3.2. Built with Streamlit, Langchain, and Ollama.
+
 ## Features
 
 - **Multi-format Document Support**: Process PDF, DOCX, TXT, MD, and CSV files with intelligent text extraction.
@@ -25,27 +27,44 @@ A Retrieval-Augmented Generation (RAG) application that enables intelligent docu
 ## Installation
 
 1. Clone the repository:
-        ```bash
-        git clone <repository-url>
-        cd LLM-Powered-Document-Q-A-with-Llama-3.2
-        ```
+    ```bash
+    git clone <repository-url>
+    cd LLM-Powered-Document-Q-A-with-Llama-3.2
+    ```
 2. Install dependencies:
-        ```bash
-        pip install -r requirements.txt
-        ```
+    ```bash
+    pip install -r requirements.txt
+    ```
 3. Ensure Ollama is running locally on port 11434.
 
 ## Usage
 
+🚀 Quick Start
+
+Install Ollama and pull Llama 3.2:
+```bash
+ollama pull llama3.2
+```
+
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+Run the app:
+```bash
+streamlit run app.py
+```
+
 1. Start the application:
-        ```bash
-        streamlit run app.py
-        ```
+    ```bash
+    streamlit run app.py
+    ```
 2. Access the web interface at [http://localhost:8501](http://localhost:8501).
 3. Configure the application using the sidebar:
-        - Select the LLM model.
-        - Adjust temperature and chunk size.
-        - Upload documents or paste text directly.
+    - Select the LLM model.
+    - Adjust temperature and chunk size.
+    - Upload documents or paste text directly.
 4. Enter questions and receive AI-powered responses based on your documents.
 
 ## Architecture
