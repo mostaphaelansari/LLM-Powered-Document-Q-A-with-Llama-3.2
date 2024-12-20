@@ -27,7 +27,7 @@ A Retrieval-Augmented Generation (RAG) application that enables intelligent docu
 1. Clone the repository:
         ```bash
         git clone <repository-url>
-        cd enhanced-rag-app
+        cd LLM-Powered-Document-Q-A-with-Llama-3.2
         ```
 2. Install dependencies:
         ```bash
@@ -112,7 +112,7 @@ Detailed logging is implemented throughout:
 
 ## License
 
-[Insert License Information]
+MIT License
 
 ## Acknowledgments
 
