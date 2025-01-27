@@ -9,8 +9,8 @@ import logging
 from typing import List, Optional, Dict, Tuple
 from dataclasses import dataclass
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import OllamaEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.embeddings import OllamaEmbeddings  # Updated import
+from langchain_community.vectorstores import FAISS  #
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -295,7 +295,7 @@ class EnhancedRAGApplication:
 def create_streamlit_ui():
     """Create an enhanced Streamlit UI"""
     st.set_page_config(
-        page_title="Enhanced RAG Application",
+        page_title="Deepseek AI Document Q&A",
         page_icon="🤖",
         layout="wide",
         initial_sidebar_state="expanded"
@@ -331,7 +331,7 @@ def create_streamlit_ui():
 def main():
     session_state = create_streamlit_ui()
     
-    st.title("🔍 Enhanced RAG Application")
+    st.title("🔍 Deepseek & LLAMA RAG Application")
     st.markdown("""
     ### Advanced Document Analysis and Question Answering
     Upload documents or paste text to get AI-powered insights and answers.
@@ -340,7 +340,11 @@ def main():
     # Initialize RAG application with configurable parameters
     with st.sidebar:
         st.header("⚙️ Configuration")
-        model_name = st.selectbox("Model", ["llama3.2", "llama2-uncensored", "mistral"], index=0)
+        model_name = st.selectbox(
+                                "Model", 
+                                ["llama3.2", "deepseek-r1:7b", "llama2-uncensored", "mistral"],  # Added deppseek
+                                index=0
+                            )
         temperature = st.slider("Temperature", 0.0, 1.0, 0.7)
         chunk_size = st.number_input("Chunk Size", 100, 1000, 500)
         
